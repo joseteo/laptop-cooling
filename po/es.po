@@ -1,0 +1,211 @@
+# Spanish translation for Laptop Cooling.
+# Copyright (C) 2026 Teo Lorente
+# This file is distributed under the same license as the Laptop Cooling package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Laptop Cooling 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/joseteo/laptop-cooling/issues\n"
+"POT-Creation-Date: 2026-10-16 13:58+0200\n"
+"PO-Revision-Date: 2026-10-16 12:20+0200\n"
+"Last-Translator: Teo Lorente <joseteolorentevallecillos@gmail.com>\n"
+"Language-Team: Spanish <es@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:33
+msgid "Quiet"
+msgstr "Silencioso"
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:35
+msgid "Balanced"
+msgstr "Equilibrado"
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:37
+msgid "Performance"
+msgstr "Rendimiento"
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:38
+msgid "Unavailable"
+msgstr "No disponible"
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:58
+msgid "Cooling"
+msgstr "Refrigeración"
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:58
+msgid "Connecting…"
+msgstr "Conectando…"
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:67
+#: extension/laptop-cooling@joseteo.github.io/extension.js:262
+#: extension/laptop-cooling@joseteo.github.io/extension.js:266
+#: extension/laptop-cooling@joseteo.github.io/extension.js:285
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:25
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:78
+msgid "Laptop Cooling"
+msgstr "Refrigeración del portátil"
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:81
+#: extension/laptop-cooling@joseteo.github.io/extension.js:238
+msgid "Status"
+msgstr "Estado"
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:96
+#: extension/laptop-cooling@joseteo.github.io/extension.js:266
+msgid "CPU"
+msgstr "CPU"
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:97
+#: extension/laptop-cooling@joseteo.github.io/extension.js:266
+msgid "GPU"
+msgstr "GPU"
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:98
+msgid "Fan 1"
+msgstr "Ventilador 1"
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:99
+msgid "Fan 2"
+msgstr "Ventilador 2"
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:105
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:68
+msgid "Setup Instructions"
+msgstr "Instrucciones de instalación"
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:112
+msgid "Preferences"
+msgstr "Preferencias"
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:249
+msgid "Changing cooling mode…"
+msgstr "Cambiando el modo de refrigeración…"
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:250
+msgid "Cooling service unavailable"
+msgstr "Servicio de refrigeración no disponible"
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:251
+msgid "Connect the charger for Performance mode"
+msgstr "Conecta el cargador para el modo Rendimiento"
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:261
+msgid "Changing…"
+msgstr "Cambiando…"
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:267
+msgid "Laptop Cooling, service unavailable"
+msgstr "Refrigeración del portátil, servicio no disponible"
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:285
+msgid "Cooling mode was not changed."
+msgstr "No se ha cambiado el modo de refrigeración."
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:286
+msgid ""
+"Unable to change cooling mode. Check that the charger is connected and try "
+"again."
+msgstr ""
+"No se ha podido cambiar el modo de refrigeración. Comprueba que el cargador "
+"esté conectado e inténtalo de nuevo."
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:31
+msgid "Panel Tile"
+msgstr "Botón del panel"
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:32
+msgid "The Cooling tile lives in the system menu, next to Wi-Fi and Bluetooth."
+msgstr ""
+"El botón Refrigeración se encuentra en el menú del sistema, junto a Wi-Fi y "
+"Bluetooth."
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:36
+msgid "Show Temperature in Tile"
+msgstr "Mostrar la temperatura en el botón"
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:37
+msgid "Show the peak temperature in the tile instead of the active preset"
+msgstr "Muestra la temperatura máxima en el botón en lugar del modo activo"
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:42
+msgid "Update Interval"
+msgstr "Intervalo de actualización"
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:43
+msgid "Seconds between sensor readings while the menu is open"
+msgstr "Segundos entre lecturas de los sensores mientras el menú está abierto"
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:53
+msgid "Expand Status by Default"
+msgstr "Expandir el estado de forma predeterminada"
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:54
+msgid ""
+"Show the CPU, GPU, and both fan readings in the menu instead of the peak "
+"summary row"
+msgstr ""
+"Muestra las lecturas de CPU, GPU y ambos ventiladores en el menú en lugar de "
+"la fila de resumen máximo"
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:60
+msgid "Cooling Modes"
+msgstr "Modos de refrigeración"
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:61
+msgid ""
+"Quiet, Balanced, and Performance are the laptop firmware’s own presets. They "
+"change the fan curve and the power budget together, so Performance can raise "
+"heat as well as fan speed, and it requires the charger. They are independent "
+"of the CPU power profile in the system menu."
+msgstr ""
+"Silencioso, Equilibrado y Rendimiento son los perfiles propios del firmware "
+"del portátil. Cambian juntos la curva del ventilador y el presupuesto de "
+"energía, así que Rendimiento puede aumentar tanto la temperatura como la "
+"velocidad de los ventiladores, y requiere el cargador. Son independientes "
+"del perfil de energía de la CPU del menú del sistema."
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:65
+msgid "System Appearance"
+msgstr "Aspecto del sistema"
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:66
+msgid "Menus and controls follow the current GNOME Shell and system theme"
+msgstr ""
+"Los menús y los controles siguen el tema actual de GNOME Shell y del sistema"
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:69
+msgid "Install the cooling service once to enable readings and mode changes"
+msgstr ""
+"Instala el servicio de refrigeración una vez para activar las lecturas y el "
+"cambio de modo"
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:71
+msgid "Project Homepage"
+msgstr "Página del proyecto"
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:72
+msgid "Source code, releases, and hardware support notes"
+msgstr "Código fuente, versiones y notas de compatibilidad del hardware"
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:75
+msgid "About"
+msgstr "Acerca de"
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:79
+msgid "Version"
+msgstr "Versión"
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:81
+msgid "Report an Issue"
+msgstr "Informar de un problema"
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:82
+msgid "Report a problem or request support for another model"
+msgstr "Informa de un problema o solicita compatibilidad con otro modelo"
+
+#~ msgid "Show the higher of the two temperatures as part of the tile subtitle"
+#~ msgstr "Muestra la mayor de las dos temperaturas en el subtítulo del botón"

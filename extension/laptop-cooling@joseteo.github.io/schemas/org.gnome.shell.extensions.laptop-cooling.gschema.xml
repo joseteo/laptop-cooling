@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.laptop-cooling" path="/org/gnome/shell/extensions/laptop-cooling/">
+    <key name="show-temperature" type="b"><default>false</default><summary>Show temperature in the Cooling quick-settings tile</summary></key>
+    <key name="refresh-interval" type="i"><default>5</default><range min="5" max="30"/><summary>Display update interval in seconds</summary></key>
+    <key name="show-status-details" type="b"><default>false</default><summary>Show every sensor reading in the Cooling menu instead of the peak summary row</summary></key>
+  </schema>
+</schemalist>

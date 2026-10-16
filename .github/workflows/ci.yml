@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  checks:
+    name: Build and tests
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            gettext libglib2.0-bin gnome-shell-common python3-gi \
+            gir1.2-glib-2.0 nodejs
+
+      - name: Run the non-hardware test suite
+        run: bash scripts/run-tests.sh
+
+      - name: Build the extension bundle
+        run: |
+          # pack only needs the tooling; the shell itself is not required
+          sudo apt-get install -y --no-install-recommends gnome-shell
+          bash scripts/build-extension.sh
+          test -s dist/laptop-cooling@joseteo.github.io.shell-extension.zip
+          unzip -l dist/laptop-cooling@joseteo.github.io.shell-extension.zip
+
+      - name: Upload the bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: laptop-cooling-extension-zip
+          path: dist/laptop-cooling@joseteo.github.io.shell-extension.zip
+          if-no-files-found: error

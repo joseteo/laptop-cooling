@@ -1,0 +1,20 @@
+[Unit]
+Description=Lenovo laptop cooling sensors and native thermal modes
+After=dbus.service
+Requires=dbus.service
+
+[Service]
+Type=dbus
+BusName=org.teo.LaptopCooling
+ExecStart=/usr/bin/python3 -I /usr/local/libexec/laptop-cooling/cooling_service.py
+User=root
+Restart=on-failure
+RestartSec=5
+ProtectHome=true
+ProtectSystem=strict
+PrivateTmp=true
+ReadWritePaths=/run/lock
+# ACPI evaluation uses the existing proc interface, not direct EC RAM writes.
+
+[Install]
+WantedBy=multi-user.target

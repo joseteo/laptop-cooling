@@ -1,0 +1,12 @@
+{
+  "uuid": "laptop-cooling@joseteo.github.io",
+  "name": "Laptop Cooling",
+  "description": "Adds a Cooling tile to the system menu with CPU and GPU temperatures, both fan speeds, and the laptop's own Quiet, Balanced, and Performance presets. The tile uses the current GNOME Shell theme and adds no separate top-bar button.\n\nRequires the Laptop Cooling service, installed once as root. Hardware support is currently limited to the Lenovo IdeaPad Gaming 3 15IMH05 (81Y4, BIOS EGCN41WW); other models show an unsupported message instead of guessing. GNOME Shell 46 on Ubuntu 24.04 is the tested target.",
+  "shell-version": [
+    "46"
+  ],
+  "url": "https://github.com/joseteo/laptop-cooling",
+  "settings-schema": "org.gnome.shell.extensions.laptop-cooling",
+  "gettext-domain": "laptop-cooling",
+  "version-name": "1.0.0"
+}

@@ -1,0 +1,21 @@
+# Build output
+dist/
+
+# QA session: throwaway roots and captured frames
+qa/.run/
+qa/out/
+
+# Compiled schemas are produced by scripts/build-extension.sh
+extension/*/schemas/gschemas.compiled
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Translation editor backups
+po/*.po~
+po/*.mo
+
+# Editor and OS noise
+*~
+.*.swp

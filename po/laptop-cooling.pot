@@ -1,0 +1,195 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Teo Lorente
+# This file is distributed under the same license as the Laptop Cooling package.
+# Teo Lorente <joseteolorentevallecillos@gmail.com>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Laptop Cooling 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/joseteo/laptop-cooling/issues\n"
+"POT-Creation-Date: 2026-10-16 13:58+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:33
+msgid "Quiet"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:35
+msgid "Balanced"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:37
+msgid "Performance"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:38
+msgid "Unavailable"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:58
+msgid "Cooling"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:58
+msgid "Connecting…"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:67
+#: extension/laptop-cooling@joseteo.github.io/extension.js:262
+#: extension/laptop-cooling@joseteo.github.io/extension.js:266
+#: extension/laptop-cooling@joseteo.github.io/extension.js:285
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:25
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:78
+msgid "Laptop Cooling"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:81
+#: extension/laptop-cooling@joseteo.github.io/extension.js:238
+msgid "Status"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:96
+#: extension/laptop-cooling@joseteo.github.io/extension.js:266
+msgid "CPU"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:97
+#: extension/laptop-cooling@joseteo.github.io/extension.js:266
+msgid "GPU"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:98
+msgid "Fan 1"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:99
+msgid "Fan 2"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:105
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:68
+msgid "Setup Instructions"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:112
+msgid "Preferences"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:249
+msgid "Changing cooling mode…"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:250
+msgid "Cooling service unavailable"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:251
+msgid "Connect the charger for Performance mode"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:261
+msgid "Changing…"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:267
+msgid "Laptop Cooling, service unavailable"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:285
+msgid "Cooling mode was not changed."
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/extension.js:286
+msgid ""
+"Unable to change cooling mode. Check that the charger is connected and try "
+"again."
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:31
+msgid "Panel Tile"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:32
+msgid "The Cooling tile lives in the system menu, next to Wi-Fi and Bluetooth."
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:36
+msgid "Show Temperature in Tile"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:37
+msgid "Show the peak temperature in the tile instead of the active preset"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:42
+msgid "Update Interval"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:43
+msgid "Seconds between sensor readings while the menu is open"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:53
+msgid "Expand Status by Default"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:54
+msgid ""
+"Show the CPU, GPU, and both fan readings in the menu instead of the peak "
+"summary row"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:60
+msgid "Cooling Modes"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:61
+msgid ""
+"Quiet, Balanced, and Performance are the laptop firmware’s own presets. They "
+"change the fan curve and the power budget together, so Performance can raise "
+"heat as well as fan speed, and it requires the charger. They are independent "
+"of the CPU power profile in the system menu."
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:65
+msgid "System Appearance"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:66
+msgid "Menus and controls follow the current GNOME Shell and system theme"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:69
+msgid "Install the cooling service once to enable readings and mode changes"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:71
+msgid "Project Homepage"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:72
+msgid "Source code, releases, and hardware support notes"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:75
+msgid "About"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:79
+msgid "Version"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:81
+msgid "Report an Issue"
+msgstr ""
+
+#: extension/laptop-cooling@joseteo.github.io/prefs.js:82
+msgid "Report a problem or request support for another model"
+msgstr ""
