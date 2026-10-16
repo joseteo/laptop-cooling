@@ -1,0 +1,47 @@
+{
+  "comment": "Debug: identify the floating gear icon and the stray overview widgets.",
+  "target": "@TARGET@",
+  "outdir": "@OUTDIR@",
+  "steps": [
+    {
+      "at": 4.0,
+      "do": "note",
+      "text": "session ready"
+    },
+    {
+      "at": 4.5,
+      "do": "overview-state"
+    },
+    {
+      "at": 5.0,
+      "do": "prefs-window"
+    },
+    {
+      "at": 8.0,
+      "do": "overview-state"
+    },
+    {
+      "at": 8.5,
+      "do": "dump-apps"
+    },
+    {
+      "at": 9.0,
+      "do": "dump-actors",
+      "rect": [
+        560,
+        580,
+        300,
+        220
+      ]
+    },
+    {
+      "at": 10.0,
+      "do": "shot",
+      "name": "prefs"
+    },
+    {
+      "at": 11.0,
+      "do": "done"
+    }
+  ]
+}

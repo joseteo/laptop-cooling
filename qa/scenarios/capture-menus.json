@@ -1,0 +1,15 @@
+{
+  "comment": "Short pass for translation screenshots: tile menu and preferences window only.",
+  "target": "@TARGET@",
+  "outdir": "@OUTDIR@",
+  "steps": [
+    {"at": 4.0, "do": "note", "text": "session ready"},
+    {"at": 5.0, "do": "open-menu"},
+    {"at": 7.0, "do": "shot", "name": "menu"},
+    {"at": 8.0, "do": "close-panel"},
+    {"at": 9.0, "do": "prefs-window"},
+    {"at": 13.0, "do": "shot", "name": "preferences"},
+    {"at": 14.5, "do": "close-prefs-window"},
+    {"at": 15.5, "do": "done"}
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "uuid": "laptop-cooling-qa@joseteo.github.io",
+  "name": "Laptop Cooling QA Harness",
+  "description": "Test-only helper that drives the shipped Laptop Cooling extension inside an isolated headless GNOME Shell session and captures screenshots. Not part of any release.",
+  "shell-version": [
+    "46"
+  ],
+  "version-name": "0.0.1"
+}

@@ -1,0 +1,63 @@
+{
+  "comment": "Cleanup regression test plus Status row interaction: probes connectObject()/disconnectObject() inside the live shell, clicks the Status row without closing the menu, captures the collapsed and expanded views, and runs the extension through a disable/enable cycle while counting actors.",
+  "target": "@TARGET@",
+  "outdir": "@OUTDIR@",
+  "steps": [
+    {
+      "at": 4.0,
+      "do": "note",
+      "text": "session ready"
+    },
+    {
+      "at": 5.0,
+      "do": "probe"
+    },
+    {
+      "at": 6.0,
+      "do": "open-panel"
+    },
+    {
+      "at": 7.0,
+      "do": "open-menu"
+    },
+    {
+      "at": 8.5,
+      "do": "shot",
+      "name": "status-peak"
+    },
+    {
+      "at": 9.0,
+      "do": "toggle-details"
+    },
+    {
+      "at": 10.5,
+      "do": "shot",
+      "name": "status-expanded"
+    },
+    {
+      "at": 11.0,
+      "do": "toggle-details"
+    },
+    {
+      "at": 12.5,
+      "do": "shot",
+      "name": "status-peak-again"
+    },
+    {
+      "at": 13.0,
+      "do": "close-panel"
+    },
+    {
+      "at": 14.0,
+      "do": "cycle-check"
+    },
+    {
+      "at": 26.0,
+      "do": "count-actors"
+    },
+    {
+      "at": 27.0,
+      "do": "done"
+    }
+  ]
+}
