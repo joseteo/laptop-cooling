@@ -61,7 +61,7 @@ per step, from inside the shell), `shell.log` (the shell's own stderr) and
   with `LimitsExceeded`.
 - **GTK4 in a standalone GJS process segfaults** unless `Gtk.init()` is called
   before any widget exists. Both runners do it explicitly.
-- **The shell's own “Open Extension Preferences” dialog never maps a window**
+- **The shell's own "Open Extension Preferences" dialog never maps a window**
   in a headless session. The preferences page is therefore captured with a
   standalone Wayland client (`qa/runner/prefs-window.js`) that loads the very
   same `prefs.js`; it also needs `ExtensionPreferences.lookupByUUID` stubbed so

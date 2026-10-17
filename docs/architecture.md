@@ -52,8 +52,8 @@ the top menu, so expanding the details would dismiss the panel. The row owns a
    `Gio.DBusProxy`-free `Gio.DBus.system.call()` with a `Gio.Cancellable` and a
    generation counter, so a `disable()` in flight cannot touch dead actors.
 3. `_render()` maps the JSON status onto the labels and the tile:
-   - `available` is false, or `updated_at` older than 20 s → dashes and an
-     “Unavailable” subtitle.
+   - `available` is false, or `updated_at` older than 20 s: the readings show
+     `-` and the subtitle reads "Unavailable".
    - Otherwise CPU/GPU temperatures, both fan speeds, the active mode, and the
      peak of each pair for the summary line.
 4. The refresh timer only runs while the menu is open
@@ -73,11 +73,15 @@ the top menu, so expanding the details would dismiss the panel. The row owns a
 **Lifecycle rules** (the part EGO reviewers look at first)
 
 - Every `connectObject()` is owned by a widget that `disable()` destroys
-  (toggle/menu, indicator) or explicitly disconnected with
+  (status row, toggle/menu, indicator) or explicitly disconnected with
   `disconnectObject(owner)` when the emitter outlives the extension.
-- `disable()` destroys the menu, the toggle and the indicator, drops the
-  `Gio.Cancellable`, and nulls every reference; there is no module-level state
-  to forget.
+- `disable()` destroys the status row and its children, the readings section
+  and the three menu items explicitly, then the menu, the toggle and the
+  indicator, drops the `Gio.Cancellable`, and nulls every reference; there is
+  no module-level state to forget.
+- The status row's click action is only referenced by the row, kept in a local
+  const instead of a field: destroying the row releases the action and its
+  handler together.
 - Because the extension instance is not a GObject, the *owner* passed to
   `connectObject()` is always one of those widgets, never `this`.
 

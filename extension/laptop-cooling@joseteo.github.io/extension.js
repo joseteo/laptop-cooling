@@ -84,9 +84,12 @@ export default class LaptopCooling extends Extension {
         this._statusArrow = new St.Icon({icon_name: 'pan-down-symbolic',
             style_class: 'popup-menu-arrow'});
         this._statusRow.add_child(this._statusArrow);
-        this._statusToggle = new Clutter.ClickAction();
-        this._statusToggle.connectObject('clicked', () => this._toggleDetails(), this._statusRow);
-        this._statusRow.add_action(this._statusToggle);
+        // The click action lives only on the status row: no field is kept
+        // for it, and its handler is owned by the row, so destroying the row
+        // releases both the action and the handler.
+        const statusToggle = new Clutter.ClickAction();
+        statusToggle.connectObject('clicked', () => this._toggleDetails(), this._statusRow);
+        this._statusRow.add_action(statusToggle);
         // Keyboard activation (Space/Return) arrives as 'activate'; the menu
         // closes afterwards, exactly like any other item.
         this._statusRow.connectObject('activate', () => this._toggleDetails(), this._statusRow);
@@ -309,17 +312,37 @@ export default class LaptopCooling extends Extension {
         this._settings?.disconnectObject(this._indicator);
         Main.sessionMode.disconnectObject(this._indicator);
         this._settings = null;
-        // The tile's menu is not a child of the tile, so it has to be
-        // destroyed on its own; it destroys its items (readings included).
+        // Destroy the menu actors explicitly, children first: the status row
+        // (with its arrow and summary), the readings section and the three
+        // menu items. The tile's menu is not a child of the tile, so it has
+        // to be destroyed on its own; it takes the preset rows and the
+        // separators with it.
+        this._summary?.destroy();
+        this._statusArrow?.destroy();
+        this._statusRow?.destroy();
+        this._readings?.destroy();
+        this._message?.destroy();
+        this._setup?.destroy();
+        this._prefs?.destroy();
         this._toggle?.menu.destroy();
         this._toggle?.destroy();
         this._toggle = null;
         this._indicator?.destroy();
         this._indicator = null;
+        // Clear every reference so a disable/enable cycle leaves no state.
+        this._fanIcon = null;
+        this._modeItems = null;
         this._statusRow = null;
-        this._statusToggle = null;
         this._summary = null;
         this._statusArrow = null;
+        this._readings = null;
+        this._message = null;
+        this._setup = null;
+        this._prefs = null;
+        this._cpu = null;
+        this._gpu = null;
+        this._fan1 = null;
+        this._fan2 = null;
         this._status = null;
         this._loggedError = null;
     }

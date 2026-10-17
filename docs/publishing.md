@@ -45,9 +45,11 @@ Then confirm, by hand, on the artifact that will be uploaded:
 3. The listing lives at
    <https://extensions.gnome.org/extension/11287/laptop-cooling/>; the README
    badge and installation section already point at it.
-4. Re-uploading a corrected zip supersedes a pending one: extensions.gnome.org
-   auto-rejects older unreviewed versions of the extension when they declare
-   the same shell-version set, so there is nothing to delete by hand.
+4. extensions.gnome.org runs its static analyzer (Shexli) on every upload and
+   shows the findings on the review page. Re-uploading a corrected zip
+   supersedes a pending one: older unreviewed versions of the extension with
+   the same shell-version set are auto-rejected, so there is nothing to delete
+   by hand.
 5. Respond to reviewers on the extension's *Review* page. Reviews are volunteer
    work; a short, factual reply with a link to the commit that addresses a
    comment is what reviewers ask for.
@@ -59,7 +61,8 @@ Then confirm, by hand, on the artifact that will be uploaded:
 | Signal handlers connected with `connectObject()` / a named owner, disconnected deterministically | `extension.js`: every connection has a widget owner; `disable()` destroys the owners. `qa/scenarios/verify-cleanup.json` asserts it in a live shell. |
 | No module-scope instantiation, no state outside the class | `extension.js` exports a single `Extension` subclass; module scope holds constants and pure helpers only. |
 | No private/undocumented shell APIs | Only `ui/main.js`, `ui/quickSettings.js`, `ui/popupMenu.js` and `extensions/extension.js` are imported. |
-| Cleanup on `disable()` | Tile, menu, indicator and `Gio.Cancellable` are destroyed/released; a second `enable()`/`disable()` cycle leaks nothing (actor counts are compared by the QA harness). |
+| Cleanup on `disable()` | The status row, its children, the readings section and the menu items are destroyed explicitly, then the menu, tile and indicator; every field is cleared. A second `enable()`/`disable()` cycle leaks nothing (actor counts are compared by the QA harness). |
+| Analyzer destroy/release rules (EGO-L-002, EGO-L-005) | Every object created in `enable()` has a matching `.destroy()` in `disable()` and every reference is set to `null`; the status row's click action is owned by the row and needs no field. |
 | Reasonable metadata | `uuid`, `name`, `description`, `shell-version`, `url`, `settings-schema`, `gettext-domain`, `version-name`, and no fake compatibility. |
 | Translations included correctly | `--podir=po --gettext-domain=laptop-cooling` during packaging; `unzip -l` shows `locale/<lang>/LC_MESSAGES/laptop-cooling.mo`. |
 | No root code inside the shell | The extension only calls two D-Bus methods; the privileged half is a separate systemd service with a polkit action. |

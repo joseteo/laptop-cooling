@@ -401,16 +401,20 @@ export default class QaCapture extends Extension {
             // Emits the row's click action exactly like a pointer click does
             // (the shipped row is not a standard activatable menu item, so
             // clicking it must not close the menu), then checks that the
-            // setting really flipped.
+            // setting really flipped. The action is found through Clutter's
+            // public API: the shipped extension keeps no field for it, and
+            // the row's own (disabled) menu-item action is skipped.
             const stateObj = this._target();
-            const action = stateObj?._statusToggle;
-            if (!action) {
+            const row = stateObj?._statusRow;
+            const action = row?.get_actions?.().find(
+                a => a instanceof Clutter.ClickAction && a.enabled);
+            if (!row || !action) {
                 this._note('cannot toggle Status details: target not loaded');
                 break;
             }
             const settings = stateObj.getSettings();
             const before = settings.get_boolean('show-status-details');
-            action.emit('clicked', stateObj._statusRow);
+            action.emit('clicked', row);
             const after = settings.get_boolean('show-status-details');
             this._note(`clicked Status row: show-status-details ${before} -> ${after} ` +
                 `${before !== after ? 'PASS' : 'FAIL'}`);
