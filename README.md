@@ -197,8 +197,9 @@ mode.** The script is safe to re-run; see
 ### 2. Install the extension
 
 The **extensions.gnome.org** listing at
-`https://extensions.gnome.org/extension/11287/laptop-cooling/` is in review; it
-becomes installable once it passes. Until then, install from a checkout:
+`https://extensions.gnome.org/extension/11287/laptop-cooling/` is in review. It
+becomes installable once it passes; while no version is approved the page is
+served only to the owner and to reviewers. Install from a checkout meanwhile:
 
 ```bash
 bash scripts/install-extension.sh      # builds dist/…zip and installs it

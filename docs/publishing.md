@@ -44,7 +44,9 @@ Then confirm, by hand, on the artifact that will be uploaded:
    one) and the **screenshot** URLs.
 3. The listing lives at
    <https://extensions.gnome.org/extension/11287/laptop-cooling/>; the README
-   badge and installation section already point at it.
+   badge and installation section already point at it. While no version is
+   approved the page is served only to the owner and to reviewers, so an
+   anonymous visit returns 404 in the meantime; that is expected.
 4. extensions.gnome.org runs its static analyzer (Shexli) on every upload and
    shows the findings on the review page. Re-uploading a corrected zip
    supersedes a pending one: older unreviewed versions of the extension with
